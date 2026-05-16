@@ -1,0 +1,36 @@
+{
+    "chat.tools.autoApprove": ["*"],
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "never",
+        "source.sortImports": "never"
+    },
+    "files.watcherExclude": {
+        "**/node_modules/**": true,
+        "**/test-results/**": true,
+        "**/playwright-report/**": true,
+        "**/.git/**": true,
+        "**/reports/**": true,
+        "**/junit-reports/**": true
+    },
+    "files.exclude": {
+        "**/node_modules": true,
+        "**/test-results": true,
+        "**/playwright-report": true,
+        "**/reports": true,
+        "**/junit-reports": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/playwright-report": true,
+        "**/test-results": true,
+        "**/reports": true,
+        "**/junit-reports": true
+    },
+    "typescript.tsserver.maxTsServerMemory": 3072,
+    "typescript.disableAutomaticTypeAcquisition": true,
+    "eslint.useFlatConfig": true,
+    "editor.minimap.enabled": false,
+    "extensions.autoUpdate": false
+}

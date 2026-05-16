@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "ms-playwright.playwright",
+        "jaktestowac-pl.playwright-helpers",
+        "jianglinghao.vscode-npm-scripts",
+        "pkief.material-icon-theme",
+        "eamodio.gitlens",
+        "dbaeumer.vscode-eslint",
+        "mikestead.dotenv",
+        "streetsidesoftware.code-spell-checker"
+    ]
+}
