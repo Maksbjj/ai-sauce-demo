@@ -13,12 +13,18 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                   node-version: lts/*
+                  cache: npm
             - name: Install dependencies
               run: |
                   sed -i 's|https://gluoneurope.jfrog.io/artifactory/api/npm/aar-npm-public/|https://registry.npmjs.org/|g' package-lock.json
                   npm ci
+            - name: Cache Playwright browsers
+              uses: actions/cache@v4
+              with:
+                  path: ~/.cache/ms-playwright
+                  key: playwright-chromium-${{ hashFiles('package-lock.json') }}
             - name: Install Playwright Browsers
-              run: npx playwright install --with-deps
+              run: npx playwright install chromium --with-deps
             - name: Run Playwright tests
               run: npx playwright test
               env:
