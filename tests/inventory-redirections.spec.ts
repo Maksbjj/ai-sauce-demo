@@ -11,7 +11,7 @@ const productData = [
 
 test.describe('Inventory Page - Redirections', () => {
     test('Should stay on inventory page when clicking All Items in the burger menu', async ({
-        loggedIn,
+        loggedIn: _loggedIn,
         page,
         inventoryPage,
     }) => {
@@ -29,7 +29,7 @@ test.describe('Inventory Page - Redirections', () => {
     })
 
     test('Should navigate to Sauce Labs website when clicking About in the burger menu', async ({
-        loggedIn,
+        loggedIn: _loggedIn,
         page,
         inventoryPage,
     }) => {
@@ -47,7 +47,7 @@ test.describe('Inventory Page - Redirections', () => {
     })
 
     test('Should navigate to the correct product detail page when clicking a product title link', async ({
-        loggedIn,
+        loggedIn: _loggedIn,
         page,
         inventoryPage,
     }) => {
@@ -61,7 +61,7 @@ test.describe('Inventory Page - Redirections', () => {
     })
 
     test('Should navigate to the correct product detail page when clicking a product image link', async ({
-        loggedIn,
+        loggedIn: _loggedIn,
         page,
         inventoryPage,
     }) => {
@@ -75,7 +75,7 @@ test.describe('Inventory Page - Redirections', () => {
     })
 
     test('Should open Twitter page in a new tab when clicking the Twitter footer link', async ({
-        loggedIn,
+        loggedIn: _loggedIn,
         page,
         inventoryPage,
     }) => {
@@ -87,7 +87,7 @@ test.describe('Inventory Page - Redirections', () => {
     })
 
     test('Should open Facebook page in a new tab when clicking the Facebook footer link', async ({
-        loggedIn,
+        loggedIn: _loggedIn,
         page,
         inventoryPage,
     }) => {
@@ -99,7 +99,7 @@ test.describe('Inventory Page - Redirections', () => {
     })
 
     test('Should open LinkedIn page in a new tab when clicking the LinkedIn footer link', async ({
-        loggedIn,
+        loggedIn: _loggedIn,
         page,
         inventoryPage,
     }) => {

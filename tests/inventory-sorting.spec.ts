@@ -1,9 +1,9 @@
 import { softExpect } from '@assertions'
-import { expect, test } from '@fixtures'
+import { test } from '@fixtures'
 
 test.describe('Inventory Page - Sorting', () => {
 
-    test('Should display products sorted by name A to Z by default', async ({ loggedIn, inventoryPage }) => {
+    test('Should display products sorted by name A to Z by default', async ({ loggedIn: _loggedIn, inventoryPage }) => {
         await test.step('Get product names in current order', async () => {
             const names = await inventoryPage.getProductNames()
 
@@ -11,7 +11,7 @@ test.describe('Inventory Page - Sorting', () => {
         })
     })
 
-    test('Should sort products by name Z to A', async ({ loggedIn, inventoryPage }) => {
+    test('Should sort products by name Z to A', async ({ loggedIn: _loggedIn, inventoryPage }) => {
         await test.step('Select Z to A sort option', async () => {
             await inventoryPage.sortBy('za')
         })
@@ -23,7 +23,7 @@ test.describe('Inventory Page - Sorting', () => {
         })
     })
 
-    test('Should sort products by price low to high', async ({ loggedIn, inventoryPage }) => {
+    test('Should sort products by price low to high', async ({ loggedIn: _loggedIn, inventoryPage }) => {
         await test.step('Select Price (low to high) sort option', async () => {
             await inventoryPage.sortBy('lohi')
         })
@@ -35,7 +35,7 @@ test.describe('Inventory Page - Sorting', () => {
         })
     })
 
-    test('Should sort products by price high to low', async ({ loggedIn, inventoryPage }) => {
+    test('Should sort products by price high to low', async ({ loggedIn: _loggedIn, inventoryPage }) => {
         await test.step('Select Price (high to low) sort option', async () => {
             await inventoryPage.sortBy('hilo')
         })

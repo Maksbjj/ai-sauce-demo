@@ -2,7 +2,7 @@ import { softExpect } from '@assertions'
 import { expect, test } from '@fixtures'
 
 test.describe('Inventory Page - Cart', () => {
-    test('Should show cart badge with count 1 after adding one product', async ({ loggedIn, inventoryPage }) => {
+    test('Should show cart badge with count 1 after adding one product', async ({ loggedIn: _loggedIn, inventoryPage }) => {
         await test.step('Add first product to cart', async () => {
             await inventoryPage.addToCartByIndex(0)
         })
@@ -13,7 +13,7 @@ test.describe('Inventory Page - Cart', () => {
         })
     })
 
-    test('Should hide cart badge after removing an added product', async ({ loggedIn, inventoryPage, page }) => {
+    test('Should hide cart badge after removing an added product', async ({ loggedIn: _loggedIn, inventoryPage, page }) => {
         await test.step('Add first product to cart', async () => {
             await inventoryPage.addToCartByIndex(0)
         })
@@ -27,7 +27,7 @@ test.describe('Inventory Page - Cart', () => {
         })
     })
 
-    test('Should update cart badge count when adding multiple products', async ({ loggedIn, inventoryPage }) => {
+    test('Should update cart badge count when adding multiple products', async ({ loggedIn: _loggedIn, inventoryPage }) => {
         await test.step('Add three products to cart', async () => {
             await inventoryPage.addToCartByIndex(0)
             await inventoryPage.addToCartByIndex(1)
@@ -39,7 +39,7 @@ test.describe('Inventory Page - Cart', () => {
         })
     })
 
-    test('Should navigate to cart page when clicking the cart icon', async ({ loggedIn, inventoryPage, page }) => {
+    test('Should navigate to cart page when clicking the cart icon', async ({ loggedIn: _loggedIn, inventoryPage, page }) => {
         await test.step('Click the cart icon', async () => {
             await inventoryPage.cartLink.click()
         })
