@@ -2,7 +2,9 @@ import { defineConfig, devices } from '@playwright/test'
 import dotenv from 'dotenv'
 import path from 'path'
 
-dotenv.config({ path: path.resolve(__dirname, 'src/env/.env') })
+if (!process.env.CI) {
+    dotenv.config({ path: path.resolve(__dirname, 'src/env/.env') })
+}
 
 export default defineConfig({
     testDir: './tests',
@@ -11,7 +13,7 @@ export default defineConfig({
     retries: process.env.CI ? 2 : 0,
     workers: process.env.CI ? 4 : 5,
     reporter: process.env.CI
-        ? [['github'], ['list'], ['html', { open: 'never' }]]
+        ? [['github'], ['dot'], ['html', { open: 'never' }]]
         : [['list'], ['html', { open: 'never' }]],
     use: {
         baseURL: 'https://www.saucedemo.com',
